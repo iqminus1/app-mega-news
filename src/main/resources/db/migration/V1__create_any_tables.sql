@@ -24,7 +24,7 @@ create table role
     update_at   timestamp without time zone,
     name        varchar(255),
     type        smallint,
-    permissions text,
+    permissions varchar[],
     constraint pk_role primary key (id)
 );
 
