@@ -1,0 +1,33 @@
+server:
+  port: 80
+spring:
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/mega_news_db
+    password: 123
+  jpa:
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: wwxeww1wwxeww@gmail.com
+    password: exydveblzcsbtkfc
+  flyway:
+    enabled: true
+    locations: classpath:/db/migration
+    schemas: public
+    create-schemas: true
+
+app:
+  jwt:
+    expireDays: 7
+    secretKey: '03d2430e18744da8db2b8dbd64a64977be5c1a7f06d52197c9b8113a3b552c69'
+  base-path: 'C:\Users\User\realProjects\app-mega-news\files'
+
+  admin:
+    username: iqminus
+    firstName: Abdulaziz
+    lastName: Qodirov
+    email: iqminus7@gmail.com
+    password: 123
+
