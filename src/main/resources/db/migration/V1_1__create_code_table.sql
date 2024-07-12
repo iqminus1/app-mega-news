@@ -7,5 +7,7 @@ create table code
     create_at timestamp without time zone,
     update_at timestamp without time zone,
     email     varchar(256)                             not null unique,
-    code      varchar(6)                               not null
-);
+    code      varchar(6)                               not null,
+    attempt   int check ( attempt != 0
+)
+    );

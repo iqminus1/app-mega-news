@@ -18,12 +18,22 @@ spring:
     host: smtp.gmail.com
     port: 587
     username: wwxeww1wwxeww@gmail.com
-    password: exydveblzcsbtkfc
+    password: mmzi sfot cdjs mgwc
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
   flyway:
     enabled: true
     locations: classpath:/db/migration
     schemas: public
     create-schemas: true
+  cache:
+    redis:
+      time-to-live: 28800000
 app:
   jwt:
     expireDays: 7
@@ -34,9 +44,11 @@ app:
     username: iqminus1
     firstName: Abdulaziz
     lastName: Qodirov
-    email: iqminus7@gmail.com
+    email: wwxeww1wwxeww@gmail.com
     password: 123
 
   url:
-    verification: https://localhost/api/v1/auth/verification
+    verification: http://localhost/api/v1/auth/verification
 
+  code:
+    attempt: 5
