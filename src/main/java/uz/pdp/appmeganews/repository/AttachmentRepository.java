@@ -14,10 +14,10 @@ import java.util.Optional;
 
 @Repository
 public interface AttachmentRepository extends JpaRepository<Attachment, Integer> {
-    @Query(value = ("select a from Attachment a where a.deleted = true"))
+    @Query(value = ("select * from attachment t where t.deleted = true"),nativeQuery = true)
     List<Attachment> findAllDeletedIds();
 
-    @Query(value = ("select a from Attachment a where a.id = ?1 and a.deleted = true"))
+    @Query(value = ("select * from attachment t where t.id = ?1 and t.deleted = true"),nativeQuery = true)
     Optional<Attachment> findDeletedAttachment(Integer id);
 
     @Cacheable(value = "attachmentEntity", key = "#id")
