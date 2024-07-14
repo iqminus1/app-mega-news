@@ -13,6 +13,8 @@ spring:
         temp:
           use_jdbc_metadata_defaults: false
         type: trace.sql=true
+#    hibernate:
+#      ddl-auto: update
 
   mail:
     host: smtp.gmail.com
@@ -31,6 +33,8 @@ spring:
     locations: classpath:/db/migration
     schemas: public
     create-schemas: true
+#  liquibase:
+#    enabled: false
   cache:
     redis:
       time-to-live: 28800000
